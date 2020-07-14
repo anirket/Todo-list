@@ -5,6 +5,7 @@ const displaysection = document.querySelector(".displaysection");
 const errordisplay = document.querySelector("#error");
 const select = document.querySelector(".select");
 let notesarray = [];
+const checked =[];
 
 //class
 class notes {
@@ -52,6 +53,7 @@ function createblockquote() {
     displaysection.prepend(div);
     var note = new notes(`${input.value}`, false);
     notesarray.push(note);
+    console.log(notesarray);
     input.value = "";
 }
 //fn --- delete and completed
@@ -84,16 +86,46 @@ function deletedorcompleted(e) {
 }
 //listen to select change
 function selectchange(e) {
-    if (e.target.value === "all") {
+    const children = displaysection.children;
 
+    if (e.target.value === "all") {
+        if(checked.length !== null)
+        {
+            checked[0].style.marginTop = "0rem";
+        }
+
+        Array.from(children).forEach((child) => {
+            // child.style.display = "none";
+         child.style.display = "flex";
+        })
     }
     else if (e.target.value === "checked") {
         {
+
+
+            Array.from(children).forEach((child) => {
+                if(child.classList[1] === "checked"){
+                    child.style.display = "flex";
+                    checked.push(child);
+                }
+                else{
+                    child.style.display = "none";
+                }
+            })
+            checked[0].style.marginTop = "1.7rem";
 
         }
 
     }
     else if (e.target.value === "unchecked") {
-
+        Array.from(children).forEach((child) => {
+            // child.style.display = "none"
+            if(child.classList[1] === "checked"){
+                child.style.display = "none"
+            }
+            else{
+                child.style.display = "flex";
+            }
+        })
     }
 }
