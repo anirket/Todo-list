@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgb(248, 175, 38), rgb(241, 91, 91));
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-top: 7rem;
+}
+
+.inputsection {
+    margin-top: 3rem;
+    display: flex;
+}
+
+.inputsection input {
+    width: 70vw;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.inputsection input:focus {
+    outline: none
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.inputsection i {
+    padding: 0.6rem;
+    font-size: 2.0rem;
+    background-color: white;
+    pointer-events: none;
+}
+
+#error div {
+    margin-top: 2rem;
+    text-transform: uppercase;
+    background-color: red;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.contentsection {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    transition: transform 0.5s ease-out;
+    margin-bottom: 0.2rem;
+}
+
+.contentsection:first-child {
+    margin-top: 2rem;
+    ;
+}
+
+.icons {
+    padding: 0.6rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.icons i {
+    border-radius: 20%;
+}
+
+.icons i:nth-child(1) {
+    margin-right: 0.5rem;
+    background-color: green;
+    padding: 0.7rem;
+}
+
+.icons i:nth-child(2) {
+    background-color: red;
+    padding: 0.7rem;
+}
+
+.contentsection h2 {
+    margin-left: 1rem;
+    width: 43vw;
+    word-wrap: break-word;
+}
+
+.checked h2 {
+    text-decoration: line-through;
+}
+
+.checked {
+    opacity: 0.5;
+}
+
+.deletedanimation {
+    transform: translateY(80px);
+    background-color: red;
+}
+
+select {
+    margin-top: 1rem;
+    border: none;
+    margin-left: 0.3rem;
+    font-size: 1.3rem;
+    padding: 1.0rem;
+    color: rgb(241, 91, 91);
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+}
+
+
+option {
+    background-color: rgb(245, 188, 83);
+    color: black;
+    font-size: 1.3rem;
+}
