@@ -7,6 +7,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgb(248, 175, 38), rgb(241, 91, 91));
+ 
+/* background-image: linear-gradient(#000000 30%, #b82e1f); */
 }
 
 .container {
@@ -17,12 +19,13 @@ body {
 }
 
 .heading {
+    text-shadow: 1px 1px 2px black;
     font-size: 2.5rem;
-    margin-top: 7rem;
+    margin-top: 4.5rem;
 }
 
 .inputsection {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
 }
 
@@ -130,4 +133,29 @@ option {
     background-color: rgb(245, 188, 83);
     color: black;
     font-size: 1.3rem;
+}
+.darkmode{
+    position: fixed;
+    top:0.5rem;
+    right:0.5rem;
+    font-size: 1.3rem;
+    background-color: white;
+    padding: 0.9rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.darkmode i{
+    pointer-events: none;
+}
+
+
+.darkmodeactivatedbody{
+
+    background-image: linear-gradient(#000000 30%, #b82e1f);
+
+}
+.darkmodeactivatedheading{
+    color: #b82e1f;
+    text-shadow: 2px 1px 3px rgba(239, 0, 0, 1);
+
 }
